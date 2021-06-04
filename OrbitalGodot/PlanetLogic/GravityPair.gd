@@ -2,14 +2,14 @@ extends Node
 
 
 var target: RigidBody
-var delta: float
+var second_location: Vector3
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-func _init(targ, delt):
+func _init(targ, location):
 	self.target = targ
-	self.delta = delt
+	self.second_location = location
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

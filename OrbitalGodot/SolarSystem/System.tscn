@@ -1,23 +1,25 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://PlanetLogic/Planet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SolarSystem/System.gd" type="Script" id=2]
 
 [node name="Spatial" type="Spatial"]
-
-[node name="Planet" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
-linear_velocity = Vector3( 0, 0, 10 )
-linear_damp = 0.0
-visual_scale = 0.1
-
-[node name="Camera" type="Camera" parent="Planet"]
-transform = Transform( 1, 0, 0, 0, 0.850609, 0.525798, 0, -0.525798, 0.850609, 0, 13.98, 21.599 )
+script = ExtResource( 2 )
 
 [node name="Planet2" parent="." instance=ExtResource( 1 )]
 mass = 1000.0
 
+[node name="Camera" type="Camera" parent="Planet2"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 50, 0 )
+
 [node name="Planet3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0 )
 mass = 100.0
-linear_velocity = Vector3( 0, 0, -11 )
+linear_velocity = Vector3( 0, 0, -10 )
+debug = true
 visual_scale = 0.5
+
+[node name="Planet" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0 )
+linear_velocity = Vector3( 0, 0, -10 )
+visual_scale = 0.1
