@@ -8,8 +8,12 @@
 
 [sub_resource type="SphereShape" id=2]
 
-[node name="Planet" type="RigidBody"]
+[node name="Planet" type="RigidBody" groups=[
+"massive",
+]]
 custom_integrator = true
+contacts_reported = 1
+contact_monitor = true
 can_sleep = false
 linear_damp = 0.0
 script = ExtResource( 2 )

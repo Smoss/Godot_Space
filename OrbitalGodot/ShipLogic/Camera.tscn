@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SolarSystem/Acceleration.gd" type="Script" id=1]
+[ext_resource path="res://ShipLogic/Camera.gd" type="Script" id=3]
+
+[node name="PlayerCamera" type="KinematicBody"]
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+far = 1000.0
+
+[node name="Velocity" type="Label" parent="Camera"]
+margin_top = 1.0
+margin_right = 45.0
+margin_bottom = 15.0
+text = "Orbit 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeltaLabel" type="Label" parent="Camera"]
+margin_top = 13.0
+margin_right = 48.0
+margin_bottom = 27.0
+text = "Delta {}"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Force" type="Label" parent="Camera" groups=[
+"velocity_label",
+]]
+margin_top = 26.0
+margin_right = 40.0
+margin_bottom = 40.0
+text = "Force Vector (0, 0, 0)"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera Motion" type="Label" parent="Camera"]
+margin_top = 38.0
+margin_right = 40.0
+margin_bottom = 52.0
+text = "Camera vector: (0, 0, 0)"
+__meta__ = {
+"_edit_use_anchors_": false
+}

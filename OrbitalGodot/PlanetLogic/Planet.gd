@@ -1,7 +1,6 @@
-extends "res://PlanetLogic/Massive.gd"
+extends "res://Common/Massive.gd"
 export var visual_scale: float = 1.0
 const SatelliteCenter = preload("res://PlanetLogic/SatelliteCenter.gd")
-const gravitator = true
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -11,11 +10,11 @@ const gravitator = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#._ready()
-	var visual = get_child(0)
+	var visual = get_node("CollisionShape")
 	visual.scale *= visual_scale
-	var collision = get_child(1)
+	var collision = get_node("MeshInstance")
 	collision.scale *= visual_scale
-	var satellites: SatelliteCenter = get_child(3)
+	var satellites: SatelliteCenter = get_node("SatelliteCenter")
 	satellites.scale *= visual_scale
 	satellites.scale_orbit()
 
