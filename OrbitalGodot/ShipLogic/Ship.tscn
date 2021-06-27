@@ -22,3 +22,5 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 shape = SubResource( 2 )
+
+[node name="FuturePath" type="ImmediateGeometry" parent="."]

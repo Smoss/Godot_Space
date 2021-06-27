@@ -29,4 +29,6 @@ shape = SubResource( 2 )
 
 [node name="SatelliteCenter" parent="." instance=ExtResource( 3 )]
 
+[node name="FuturePath" type="ImmediateGeometry" parent="."]
+
 [connection signal="body_exited" from="GravityArea" to="GravityArea" method="_on_GravityArea_body_exited"]

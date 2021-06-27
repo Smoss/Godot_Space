@@ -9,7 +9,6 @@ func _ready():
 	var parent = get_parent() as Spatial
 	if parent is RigidBody:
 		scale *= (parent.mass * Massive.G_Constant)
-		print(scale)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float):
